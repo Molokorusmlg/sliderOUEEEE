@@ -1,0 +1,309 @@
+@import "./global.scss";
+
+@font-face {
+  font-family: Rodchenko;
+  src: url("../assets/fonts/Airport.otf");
+  font-weight: 800;
+}
+
+.header {
+  background-color: #161a1d;
+  height: 10vh;
+  &__container {
+    height: 100%;
+    @include flex(row, space-between, center);
+    @include Container(2%, 2%, 0, padding);
+  }
+  &__logo {
+    img {
+      width: 120px;
+      height: 50px;
+    }
+  }
+  &__burger {
+    display: none;
+  }
+  &__links {
+    height: 100%;
+    @include flex(row, space-between, center);
+  }
+  &__menu {
+    height: 100%;
+    @include flex(row, center, center);
+  }
+  &__link {
+    padding: 25px;
+    text-decoration: none;
+    color: #f5f3f4;
+    font-size: 20px;
+    letter-spacing: 5px;
+    height: 100%;
+    @include flex(row, center, center);
+    transition: 0.4s ease-in-out;
+    &:hover {
+      background-color: #660708;
+    }
+  }
+}
+
+.aboutcity {
+  height: 90vh;
+  background: url("../assets/img//4562a1a6-99c7-40ee-bbff-9ca955979e7e.png")
+    no-repeat center center/cover;
+
+  @include Container(5%, 5%, 13%, padding);
+  @include flex(column, 0, center);
+  gap: 3rem;
+
+  &__title {
+    font-size: 100px;
+    color: #e5383b;
+    letter-spacing: 10px;
+  }
+  &__text {
+    max-width: 500px;
+    font-size: 30px;
+    color: #f5f3f4;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+}
+.citybutton {
+  height: 90vh;
+  @include Container(2%, 2%, 2%, padding);
+  background-color: #161a1d;
+  a {
+    text-decoration: none;
+    color: #f5f3f4;
+  }
+}
+
+.history {
+  background-color: #fff;
+  @include flex(row, 0, 0);
+  &__img {
+    img {
+      width: 70rem;
+      height: 60rem;
+    }
+  }
+  &__text {
+    font-size: 40px;
+    color: #660708;
+    letter-spacing: 5px;
+    text-align: center;
+
+    p {
+      margin-top: 10rem;
+      font-size: 30px;
+    }
+  }
+}
+
+.citynow {
+  &__search__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.redline {
+  height: 100vh;
+  @include Container(10px, 10px, 0, padding);
+  @include flex(row, 0, 0);
+  &__bigText {
+    max-width: 20vw;
+    @include flex(column, 0, 0);
+    border-right: #e12424 solid 10px;
+    &-title {
+      color: #fff;
+      background-color: #e12424;
+      font-size: 60px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    &-text {
+      @include flex(column, 0, 0);
+      gap: 10px;
+      font-size: 20px;
+      color: #e12424;
+      letter-spacing: 2px;
+      overflow-y: scroll;
+      p {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &__marshruts {
+    @include flex(column, 0, center);
+    max-width: 80vw;
+    width: 100%;
+    &-title {
+      color: #d00000;
+      font-size: 60px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    &-text {
+      font-size: 30px;
+      color: #d00000;
+      margin-top: 70px;
+      text-align: center;
+    }
+
+    &__line {
+      position: relative;
+      @include flex(column, center, center);
+    }
+    &-circle {
+      position: absolute;
+      top: -20px;
+      @include flex(row, center, center);
+      background-color: #d00000;
+      color: #fff;
+      font-size: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+    }
+    &__cardBox {
+      @include flex(column, 0, center);
+      gap: 100px;
+      width: 100vh;
+      height: 50vh;
+      margin-top: 50px;
+      object-fit: contain;
+      &_SmallCardBox {
+        width: 100vh;
+        height: 50vh;
+        position: relative;
+      }
+      &_card {
+        width: 100%;
+        @include flex(row, center, 0);
+        position: absolute;
+        top: 0;
+        gap: 30px;
+        opacity: 0;
+        transition: 0.6s ease-in-out;
+        &.active {
+          opacity: 1;
+        }
+        &-columnbox {
+          width: 200px;
+        }
+        &-map {
+          margin-bottom: 16px;
+        }
+        &-description {
+          border-radius: 5px;
+          width: 200px;
+          height: 132px;
+          text-align: center;
+          color: #d00000;
+          font-size: 15px;
+          letter-spacing: 3px;
+        }
+        &-img {
+          border-radius: 5px;
+          overflow: hidden;
+          width: 300px;
+          height: 300px;
+          img {
+            display: block;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.arrow-reverse {
+  transform: rotate(180deg);
+  transition: 0.4s ease-in-out;
+  &:hover {
+    transform: translateX(20px) rotate(180deg);
+  }
+}
+.arrow {
+  transition: 0.4s ease-in-out;
+  &:hover {
+    transform: translateX(-20px);
+  }
+}
+
+.footer {
+  margin-top: 30px;
+  background-color: #161a1d;
+  height: 200px;
+  @include flex(row, space-between, center);
+  gap: 20rem;
+  @include Container(2%, 2%, 0, padding);
+  color: #fff;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  img {
+    width: 30px;
+    height: 30px;
+  }
+  &__logo {
+    img {
+      width: 250px;
+      height: 100px;
+    }
+  }
+  &__company {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &-title {
+      font-size: 25px;
+    }
+    &-text {
+      font-size: 20px;
+    }
+  }
+  &__contacts {
+    @include flex(column, center, center);
+    gap: 30px;
+  }
+  &__button {
+    padding: 20px;
+    transition: 0.7s ease-in-out;
+    background-color: #f5f3f4;
+    border-radius: 5px;
+    a {
+      color: black;
+    }
+    &:hover {
+      background-color: black;
+      a {
+        color: #f5f3f4;
+      }
+    }
+  }
+}
+.telegram {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.Vk {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.telefone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  background-color: #fff;
+  border: 0;
+}

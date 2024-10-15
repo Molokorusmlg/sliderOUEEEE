@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rodchenko;
+  font-weight: 800;
+  cursor: default;
+  scroll-behavior: smooth;
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: Rodchenko;
+  src: url("../assets/fonts/ofont.ru_Rodchenko.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: Rodchenko;
+  src: url("../assets/fonts/Airport.otf");
+  font-weight: 800;
+}
+.header {
+  background-color: #161a1d;
+  height: 10vh;
+}
+.header__container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 0;
+}
+.header__logo img {
+  width: 120px;
+  height: 50px;
+}
+.header__burger {
+  display: none;
+}
+.header__links {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__menu {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header__link {
+  padding: 25px;
+  text-decoration: none;
+  color: #f5f3f4;
+  font-size: 20px;
+  letter-spacing: 5px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease-in-out;
+}
+.header__link:hover {
+  background-color: #660708;
+}
+
+.aboutcity {
+  height: 90vh;
+  background: url("../assets/img//4562a1a6-99c7-40ee-bbff-9ca955979e7e.png") no-repeat center center/cover;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 13%;
+  display: flex;
+  flex-direction: column;
+  justify-content: 0;
+  align-items: center;
+  gap: 3rem;
+}
+.aboutcity__title {
+  font-size: 100px;
+  color: #e5383b;
+  letter-spacing: 10px;
+}
+.aboutcity__text {
+  max-width: 500px;
+  font-size: 30px;
+  color: #f5f3f4;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.citybutton {
+  height: 90vh;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 2%;
+  background-color: #161a1d;
+}
+.citybutton a {
+  text-decoration: none;
+  color: #f5f3f4;
+}
+
+.history {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: 0;
+  align-items: 0;
+}
+.history__img img {
+  width: 70rem;
+  height: 60rem;
+}
+.history__text {
+  font-size: 40px;
+  color: #660708;
+  letter-spacing: 5px;
+  text-align: center;
+}
+.history__text p {
+  margin-top: 10rem;
+  font-size: 30px;
+}
+
+.citynow__search__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.redline {
+  height: 100vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: 0;
+  align-items: 0;
+}
+.redline__bigText {
+  max-width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: 0;
+  align-items: 0;
+  border-right: #e12424 solid 10px;
+}
+.redline__bigText-title {
+  color: #fff;
+  background-color: #e12424;
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.redline__bigText-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: 0;
+  align-items: 0;
+  gap: 10px;
+  font-size: 20px;
+  color: #e12424;
+  letter-spacing: 2px;
+  overflow-y: scroll;
+}
+.redline__bigText-text p:hover {
+  text-decoration: underline;
+}
+.redline__marshruts {
+  display: flex;
+  flex-direction: column;
+  justify-content: 0;
+  align-items: center;
+  max-width: 80vw;
+  width: 100%;
+}
+.redline__marshruts-title {
+  color: #d00000;
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.redline__marshruts-text {
+  font-size: 30px;
+  color: #d00000;
+  margin-top: 70px;
+  text-align: center;
+}
+.redline__marshruts__line {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.redline__marshruts-circle {
+  position: absolute;
+  top: -20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #d00000;
+  color: #fff;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+.redline__marshruts__cardBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: 0;
+  align-items: center;
+  gap: 100px;
+  width: 100vh;
+  height: 50vh;
+  margin-top: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.redline__marshruts__cardBox_SmallCardBox {
+  width: 100vh;
+  height: 50vh;
+  position: relative;
+}
+.redline__marshruts__cardBox_card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: 0;
+  position: absolute;
+  top: 0;
+  gap: 30px;
+  opacity: 0;
+  transition: 0.6s ease-in-out;
+}
+.redline__marshruts__cardBox_card.active {
+  opacity: 1;
+}
+.redline__marshruts__cardBox_card-columnbox {
+  width: 200px;
+}
+.redline__marshruts__cardBox_card-map {
+  margin-bottom: 16px;
+}
+.redline__marshruts__cardBox_card-description {
+  border-radius: 5px;
+  width: 200px;
+  height: 132px;
+  text-align: center;
+  color: #d00000;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+.redline__marshruts__cardBox_card-img {
+  border-radius: 5px;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+}
+.redline__marshruts__cardBox_card-img img {
+  display: block;
+  height: 100%;
+}
+
+.arrow-reverse {
+  transform: rotate(180deg);
+  transition: 0.4s ease-in-out;
+}
+.arrow-reverse:hover {
+  transform: translateX(20px) rotate(180deg);
+}
+
+.arrow {
+  transition: 0.4s ease-in-out;
+}
+.arrow:hover {
+  transform: translateX(-20px);
+}
+
+.footer {
+  margin-top: 30px;
+  background-color: #161a1d;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20rem;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 0;
+  color: #fff;
+}
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer img {
+  width: 30px;
+  height: 30px;
+}
+.footer__logo img {
+  width: 250px;
+  height: 100px;
+}
+.footer__company {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer__company-title {
+  font-size: 25px;
+}
+.footer__company-text {
+  font-size: 20px;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.footer__button {
+  padding: 20px;
+  transition: 0.7s ease-in-out;
+  background-color: #f5f3f4;
+  border-radius: 5px;
+}
+.footer__button a {
+  color: black;
+}
+.footer__button:hover {
+  background-color: black;
+}
+.footer__button:hover a {
+  color: #f5f3f4;
+}
+
+.telegram {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Vk {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.telefone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  background-color: #fff;
+  border: 0;
+}
